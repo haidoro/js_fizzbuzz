@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>FizzBuzz</title>
+<style>
+span{
+	margin-right:10px;
+	word-wrap: break-word;
+}
+.fizz.buzz{
+	color:red;
+}
+.fizz{
+	color:blue;
+}
+.buzz{
+	color:green;
+}
+</style>
+</head>
+<body>
+	<h1>FizzBuzz</h1>
+	<div id="main"></div>
+<script>
+var main = document.getElementById('main');
+for(var i=1; i<=100; i++){
+	if(i%3 === 0 && i%5 === 0 ){
+		main.innerHTML += '<span class="fizz buzz">FizzBuzz,</span>';
+	}else if(i%3 === 0){
+		main.innerHTML += '<span class="fizz">Fizz,</span>';
+	}else if(i%5 === 0){
+		main.innerHTML += '<span class="buzz">Buzz,</span>';
+	}else{
+		main.innerHTML += '<span>'+  i  +',</span>';
+	}
+}
+
+</script>
+</body>
+</html>
